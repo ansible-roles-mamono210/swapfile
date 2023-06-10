@@ -10,13 +10,15 @@
   when: ansible_swaptotal_mb < 1
 
 - name: Format the file for swap
-  ansible.builtin.command: mkswap /var/swapfile
+  ansible.builtin.command:
+    cmd: "mkswap {{ swapfile_path }}"
   register: swapfile_formatted
   changed_when: swapfile_formatted.rc == 0
   when: ansible_swaptotal_mb < 1
 
 - name: Add the file to the system as a swap file
-  ansible.builtin.command: swapon /var/swapfile
+  ansible.builtin.command:
+    cmd: "swapon {{ swapfile_path }}"
   register: swapfile_added
   changed_when: swapfile_added.rc == 0
   when: ansible_swaptotal_mb < 1
