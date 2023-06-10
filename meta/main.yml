@@ -3,7 +3,7 @@ dependencies: []
 galaxy_info:
   author: mamono210
   company: no name
-  description: Create swap
+  description: Create swap file
   galaxy_tags: []
   license: "license (BSD, MIT)"
   min_ansible_version: 8.0.0

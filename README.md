@@ -1,9 +1,9 @@
-[![CircleCI](https://circleci.com/gh/ansible-roles-mamono210/swap.svg?style=svg)](https://circleci.com/gh/ansible-roles-mamono210/swap)
+[![CircleCI](https://circleci.com/gh/ansible-roles-mamono210/swapfile.svg?style=svg)](https://circleci.com/gh/ansible-roles-mamono210/swapfile)
 
 Role Description
 =========
 
-Create swap space.
+Create swapfile.
 
 Requirements
 ------------
@@ -13,7 +13,11 @@ None
 Role Variables
 --------------
 
-None
+```YAML
+swapfile_path: Path of the swap file to create
+swapfile_size: Size of the file. See details community.general.filesize module manual.
+swapfile_blocksize: Size of blocks.
+```
 
 Dependencies
 ------------
@@ -28,7 +32,7 @@ Example Playbook
 - hosts: all
   become: true
   roles:
-    - swap
+    - swapfile
 ```
 
 License

@@ -1,9 +1,9 @@
 ---
 - name: Create a file to be used as swap space
   community.general.filesize:
-    path: /var/swapfile
-    size: 2G
-    blocksize: 512B
+    path: "{{ swapfile_path }}"
+    size: "{{ swapfile_size }}"
+    blocksize: "{{ swapfile_blocksize }}"
     mode: u=rw,go=
     owner: root
     group: root

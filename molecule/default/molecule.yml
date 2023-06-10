@@ -37,6 +37,9 @@ provisioner:
       verbosity: 0
   connection_options:
     ansible_user: ${ANSIBLE_USER}
+    swapfile_path: '/var/swapfile'
+    swapfile_size: '64MB'
+    swapfile_blocksize: '65536'
   env:
     MOLECULE_DEBUG: true
   log: true

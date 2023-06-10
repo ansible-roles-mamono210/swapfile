@@ -1,1 +1,4 @@
 ---
+swapfile_path: /swapfile
+swapfile_size: 2G
+swapfile_blocksize: 512B
