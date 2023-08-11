@@ -8,9 +8,9 @@ executors:
     resource_class: small
 
 orbs:
-  aws-cli: circleci/aws-cli@3.1.1
-  molecule-ec2: orbss/molecule-ec2@0.0.7
   ansible-lint: orbss/ansible-lint@0.0.3
+  aws-cli: circleci/aws-cli@3.1.1
+  molecule-ec2: orbss/molecule-ec2@0.0.8
   yamllint: orbss/yamllint@0.0.4
 
 jobs:
